@@ -21,10 +21,10 @@ describe('KbnButton', () => {
           expect(button.classes()).to.include('kbn-button')
         })
       })
-      
+
       describe('text', () => {
         it('kbn-button-textクラスを持つbutton要素で構成されること', () => {
-          const button = mount(KbnButtonm, {
+          const button = mount(KbnButton, {
             propsData: { type: 'text' }
           })
           expect(button.is('button')).to.equal(true)

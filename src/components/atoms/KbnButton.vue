@@ -5,7 +5,7 @@
     type="button"
     @click="handleClick"
   >
-    <slot/>
+    <slot />
   </button>
 </template>
 
@@ -16,25 +16,25 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'button',
+      default: 'button'
     },
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     }
   },
 
   computed: {
-    // type に応じでクラスを動的に生成
-    classes() {
+    // `type`に応じてクラスを動的に生成する
+    classes () {
       const cls = this.type === 'text' ? ('-' + this.type) : ''
       return [`kbn-button${cls}`]
     }
   },
 
   methods: {
-    // click イベントを発行
-    handleClick(ev) {
+    // `click`イベントを発行
+    handleClick (ev) {
       this.$emit('click', ev)
     }
   }
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style scoped>
-kbn-button {
+.kbn-button {
   padding: .6em 1.3em;
 }
 .kbn-button-text {
